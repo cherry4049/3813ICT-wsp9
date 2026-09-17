@@ -1,0 +1,38 @@
+<h1>Products</h1>
+<hr>
+
+<button class="add-button" routerLink="/add-product">+ Add Product</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Units</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (product of products(); track product._id) {
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>${{ product.price }}</td>
+        <td>{{ product.units }}</td>
+        <td>
+          <button [routerLink]="['/update-product', product._id]">
+            Edit
+          </button>
+
+          <button (click)="deleteProduct(product._id!)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

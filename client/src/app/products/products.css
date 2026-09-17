@@ -1,0 +1,50 @@
+h1 {
+    display: flex;
+    margin-bottom: 4rem;
+    color:blueviolet;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.add-button {
+  background-color: rgb(36, 148, 32);
+  color: white;
+  font-size:large;
+  font-weight: bold;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: rgb(56, 115, 243);
+}
+  
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+  
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+  
+th {
+  font-weight: bold;
+  background-color:rgb(231, 249, 218);
+}
+  
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+  
+td a {
+  margin-right: 10px;
+}

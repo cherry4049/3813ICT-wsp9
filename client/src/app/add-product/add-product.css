@@ -1,0 +1,60 @@
+h1 {
+    margin-bottom: 4rem;
+    color:blueviolet;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 10px;
+}
+  
+input {
+    padding: 8px;
+}
+  
+p {
+    margin-top: 15px;
+}
+  
+a {
+    display: inline-block;
+    margin-top: 15px;
+    color:rgb(244, 10, 244);
+    font-size:large;
+}
+
+a:hover {
+    color:rgb(55, 99, 242);
+    font-size:large;
+}
+
+.add-button {
+    background-color: rgb(36, 148, 32);
+    color: white;
+    font-size:large;
+    font-weight: bold;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+  
+.add-button:hover {
+    background-color: rgb(56, 115, 243);
+  
+}
+
+.error-message {
+    color: red;
+}
+
+small {
+    color: red;
+    margin-top: -5px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}

@@ -1,0 +1,82 @@
+<h1>Add Product</h1>
+
+<form #productForm="ngForm" (ngSubmit)="addProduct()">
+
+  <label>ID:</label>
+  <input
+    type="number"
+    name="id"
+    [(ngModel)]="product.id"
+    min="1"
+    required
+    #id="ngModel"
+  >
+
+  @if (id.invalid && (id.dirty || id.touched)) {
+    <small>ID must b greater than 0.</small>
+  }
+
+  <label>Name:</label>
+  <input
+    type="text"
+    name="name"
+    [(ngModel)]="product.name"
+    maxlength="50"
+    required
+    #name="ngModel"
+  >
+
+  @if (name.invalid && (name.dirty || name.touched)) {
+    <small>Name is required.</small>
+  }
+
+  <label>Description:</label>
+  <input
+    type="text"
+    name="description"
+    [(ngModel)]="product.description"
+    maxlength="255"
+    required
+    #description="ngModel"
+  >
+
+  @if (description.invalid && (description.dirty || description.touched)) {
+    <small>Description is required.</small>
+  }
+
+  <label>Price:</label>
+  <input
+    type="number"
+    name="price"
+    step="0.01"
+    [(ngModel)]="product.price"
+    min="0"
+    required
+    #price="ngModel"
+  >
+
+  @if (price.invalid && (price.dirty || price.touched)) {
+    <small>Price must be 0 or greater.</small>
+  }
+
+  <label>Units:</label>
+  <input
+    type="number"
+    name="units"
+    [(ngModel)]="product.units"
+    min="0"
+    required
+    #units="ngModel"
+  >
+
+  @if (units.invalid && (units.dirty || units.touched)) {
+    <small>Units must be 0 or greater.</small>
+  }
+
+  <button type="submit" class="add-button" [disabled]="productForm.invalid">Add Product</button>
+
+</form>
+
+<div class="error-message">{{ message }}</div>
+
+<a routerLink="/products">← Back to Products</a>
